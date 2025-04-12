@@ -68,15 +68,12 @@ fun MyTopAppBar() {
     CenterAlignedTopAppBar(
         title = { Text("MmMsgSender") },
         actions = {
-            // 菜单按钮
             IconButton(onClick = { showMenu = !showMenu }) {
                 Icon(
                     imageVector = Icons.Default.MoreVert,
                     contentDescription = "更多选项"
                 )
             }
-
-            // 下拉菜单
             DropdownMenu(
                 expanded = showMenu,
                 onDismissRequest = { showMenu = false }
